@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <conio.h>
+main(){
+    int n, dem;
+    float a[12],kq=-10000000;
+    do{
+        printf("Nhap so n ");scanf("%d",&n);
+    } while(n<=0||n>=10);
+    for (int i=0; i<n; i++)
+    {
+        scanf("%f",&a[i]);
+    }
+    for (int i=0; i<n; i++)
+    {
+        printf("%.2f ",a[i]);
+    }
+    printf("\n");
+    for (int i=0; i<n; i++){
+        if (a[i]>kq) {kq=a[i];dem=0;}
+        if (a[i]==kq) dem++;
+    }
+    printf("\nGia tri lon nhat cua day la %.2f",kq);
+    printf("\nSo lung phan tu bang gia tri lon nhat la %d", dem);
+    getch();
+
+}
+
