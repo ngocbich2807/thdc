@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <conio.h>
+main(){
+    int n, dem;
+    float a[12],kq=0;
+    do{
+        printf("Nhap so n ");scanf("%d",&n);
+    } while(n<=0||n>=10);
+    for (int i=0; i<n; i++)
+    {
+        scanf("%f",&a[i]);
+    }
+    printf("Day so da nhap la ");
+    for (int i=0; i<n; i++)
+    {
+        printf("%f ",a[i]);
+        if (i!=0&&i!=n-1) {if (a[i]>a[i-1]&&a[i]>a[i+1]) kq+=a[i];}
+
+    }
+    printf("\n");
+    printf("Tong cac cuc dai la %f",kq);
+    getch();
+
+}
+
